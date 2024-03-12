@@ -12,14 +12,14 @@ $("body").on("keydown",function(){
         nextSequence();
     }
 });
-$("body").on("touch",function(){
+$("body").on("tap",function(){
     if(!started)
     {
         started =true;
         nextSequence();
     }
-});
-$(".btn").on("tap",function(){
+}); 
+$(".btn").on("click",function(){
     if(started)
     {
         var userChosenColour = $(this).attr("id");
