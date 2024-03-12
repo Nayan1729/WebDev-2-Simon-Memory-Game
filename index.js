@@ -12,7 +12,24 @@ $("body").on("keydown",function(){
         nextSequence();
     }
 });
+$("body").on("touch",function(){
+    if(!started)
+    {
+        started =true;
+        nextSequence();
+    }
+});
 $(".btn").on("click",function(){
+    if(started)
+    {
+        var userChosenColour = $(this).attr("id");
+        userClickedPattern.push(userChosenColour);
+        sound(userChosenColour);
+        animationOnPress(userChosenColour);
+        checkAnswer(userClickedPattern.length-1);
+    }
+})
+$(".btn").on("touch",function(){
     if(started)
     {
         var userChosenColour = $(this).attr("id");
@@ -33,6 +50,7 @@ function nextSequence()
     sound(randomChosenColour);
     $("#"+randomChosenColour).fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100);;
 }
+
 function sound(soundName)
 {
     var audio = new Audio("./sounds/"+soundName+".mp3");
