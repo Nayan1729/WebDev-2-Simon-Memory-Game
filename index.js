@@ -12,7 +12,7 @@ $("body").on("keydown",function(){
         nextSequence();
     }
 });
-$("body").on("touch",function(){
+$("body").tap(function(){
     if(!started)
     {
         started =true;
@@ -29,7 +29,7 @@ $(".btn").on("click",function(){
         checkAnswer(userClickedPattern.length-1);
     }
 })
-$(".btn").on("touch",function(){
+$(".btn").tap(function(){
     if(started)
     {
         var userChosenColour = $(this).attr("id");
