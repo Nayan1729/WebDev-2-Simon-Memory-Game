@@ -12,14 +12,14 @@ $("body").on("keydown",function(){
         nextSequence();
     }
 });
-// $("body").tap(function(){
-//     if(!started)
-//     {
-//         started =true;
-//         nextSequence();
-//     }
-// });
-$(".btn").on("click",function(){
+$("body").on("touch",function(){
+    if(!started)
+    {
+        started =true;
+        nextSequence();
+    }
+});
+$(".btn").on("tap",function(){
     if(started)
     {
         var userChosenColour = $(this).attr("id");
@@ -29,16 +29,16 @@ $(".btn").on("click",function(){
         checkAnswer(userClickedPattern.length-1);
     }
 })
-// $(".btn").tap(function(){
-//     if(started)
-//     {
-//         var userChosenColour = $(this).attr("id");
-//         userClickedPattern.push(userChosenColour);
-//         sound(userChosenColour);
-//         animationOnPress(userChosenColour);
-//         checkAnswer(userClickedPattern.length-1);
-//     }
-// })
+$(".btn").on("tap",function(){
+    if(started)
+    {
+        var userChosenColour = $(this).attr("id");
+        userClickedPattern.push(userChosenColour);
+        sound(userChosenColour);
+        animationOnPress(userChosenColour);
+        checkAnswer(userClickedPattern.length-1);
+    }
+})
 function nextSequence()
 {
     userClickedPattern=[];
