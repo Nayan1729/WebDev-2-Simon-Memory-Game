@@ -5,10 +5,15 @@ body {
 
 #level-title {
   font-family: 'Press Start 2P', cursive;
-  font-size: 3rem;
-  margin:  5%;
+  font-size: 2rem;
+  margin:  2.5%;
   color: #FEF2BF;
-
+}
+.simon-says{
+  font-family: 'Press Start 2P', cursive;
+  font-size: 2rem;
+  margin:  2.5%;
+  color: #FEF2BF;
 }
 .main-container{
   display: flex;
@@ -16,7 +21,6 @@ body {
   justify-content: center;
   align-items: center;
   /* min-height: 500px; */
-
 }
 .container {
   display: block;
