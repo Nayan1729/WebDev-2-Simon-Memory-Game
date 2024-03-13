@@ -5,31 +5,14 @@ var gamePattern = [];
 var userClickedPattern = [];
 var userChosenColour;
 
-$("body").on("keydown",function(){
+$("body").bind("keydown touchstart",function(){
     if(!started)
     {
         started =true;
         nextSequence();
     }
 });
-$("body").on("tap",function(){
-    if(!started)
-    {
-        started =true;
-        nextSequence();
-    }
-}); 
-$(".btn").on("click",function(){
-    if(started)
-    {
-        var userChosenColour = $(this).attr("id");
-        userClickedPattern.push(userChosenColour);
-        sound(userChosenColour);
-        animationOnPress(userChosenColour);
-        checkAnswer(userClickedPattern.length-1);
-    }
-})
-$(".btn").on("tap",function(){
+$(".btn").bind("click touchstart",function(){
     if(started)
     {
         var userChosenColour = $(this).attr("id");
