@@ -5,8 +5,8 @@ var gamePattern = [];
 var userClickedPattern = [];
 var userChosenColour;
 
-$("body").bind("keydown touchstart",function(event){
-    if(event.handled === false) return
+$("body").bind("click touchstart",function(event){
+    if(event.handled === false) return 
         event.stopPropagation();
         event.preventDefault();
         event.handled = true;
@@ -37,6 +37,7 @@ function nextSequence()
     $("#level-title").text("Level "+level);
     var randomNumber = Math.floor(Math.random()*4);
     var randomChosenColour = buttonColours[randomNumber];
+    $("h3").text("Simon says "+randomChosenColour)
     gamePattern.push(randomChosenColour);
     sound(randomChosenColour);
     $("#"+randomChosenColour).fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100);;
@@ -75,6 +76,7 @@ function gameOver(){
     sound("wrong");
     $("#level-title").text("Game over!!! Press any key to restart");
     level=0;
+    $("h3").text("Simon says You lose")
     gamePattern= [];
     started = false;
 }
