@@ -5,14 +5,22 @@ var gamePattern = [];
 var userClickedPattern = [];
 var userChosenColour;
 
-$("body").on("keydown",function(){
+$("body").bind("keydown touchstart",function(event){
+    if(event.handled === false) return
+        event.stopPropagation();
+        event.preventDefault();
+        event.handled = true;
     if(!started)
-    {
+    {    
         started =true;
         nextSequence();
     }
 });
-$(".btn").on("click",function(){
+$(".btn").bind("click touchstart",function(event){
+    if(event.handled === false) return
+        event.stopPropagation();
+        event.preventDefault();
+        event.handled = true;
     if(started)
     {
         var userChosenColour = $(this).attr("id");
