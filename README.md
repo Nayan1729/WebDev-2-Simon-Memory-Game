@@ -1,3 +1,5 @@
+Link to play the game : https://nayan1729.github.io/Simon-Memory-Game/
+
 Start: Click anywhere on the device to start the game.
 
 Sequence: Simon will play a sequence of colors by lighting up the buttons in a specific order. Pay close attention to the sequence because you'll need to repeat it.
