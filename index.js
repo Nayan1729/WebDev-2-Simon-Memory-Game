@@ -4,15 +4,16 @@ var started = false;
 var gamePattern = [];
 var userClickedPattern = [];
 var userChosenColour;
-$("body").bind("keydown touchstart",function(){
+
+$("body").on("keydown",function(){
     if(!started)
     {
         started =true;
         nextSequence();
     }
 });
-$(".btn").bind("click touchstart",function(){
-    if(started )
+$(".btn").on("click",function(){
+    if(started)
     {
         var userChosenColour = $(this).attr("id");
         userClickedPattern.push(userChosenColour);
