@@ -1,4 +1,4 @@
-Start: Press any key  on the P.C  to begin the game. If on mobile press anywhere on the screen to begin
+Start: Click anywhere on the device to start the game.
 
 Sequence: Simon will play a sequence of colors by lighting up the buttons in a specific order. Pay close attention to the sequence because you'll need to repeat it.
 
