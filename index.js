@@ -4,34 +4,23 @@ var started = false;
 var gamePattern = [];
 var userClickedPattern = [];
 var userChosenColour;
-var flag=false;
 $("body").bind("keydown touchstart",function(){
-    if(!started && !flag)
+    if(!started)
     {
-        flag= true;
         started =true;
-        setTimeout(function(){
-             nextSequence();
-            flag=false;
-        },100);
-       
+        nextSequence();
     }
 });
 $(".btn").bind("click touchstart",function(){
-    if(started && !flag)
+    if(started )
     {
-        flag=true;
-        setTimeout(function(){
-             var userChosenColour = $(this).attr("id");
+        var userChosenColour = $(this).attr("id");
         userClickedPattern.push(userChosenColour);
         sound(userChosenColour);
         animationOnPress(userChosenColour);
         checkAnswer(userClickedPattern.length-1);
-            flag=false;
-        });
-       
     }
-})
+});
 function nextSequence()
 {
     userClickedPattern=[];
