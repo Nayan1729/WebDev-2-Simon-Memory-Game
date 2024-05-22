@@ -1,16 +1,17 @@
 body {
   text-align: center;
   background-color: #011F3F;
+  font-family: 'Press Start 2P', cursive;
+  color: #FEF2BF;
 }
 
 #level-title {
   font-family: 'Press Start 2P', cursive;
-  font-size: 2rem;
+  font-size: 1.9rem;
   margin:  2.5%;
   color: #FEF2BF;
 }
 .simon-says{
-  font-family: 'Press Start 2P', cursive;
   font-size: 2rem;
   margin:  2.5%;
   color: #FEF2BF;
@@ -36,10 +37,10 @@ body {
   border-radius: 20%;
 }
 
-.game-over {
-  background-color: red;
-  opacity: 0.8;
-}
+  .game-over {
+    background-color: red;
+    opacity: 0.8;
+  }
 
 .red {
   background-color: red;
