@@ -1,4 +1,4 @@
-Link to play the game : https://nayan1729.github.io/Simon-Memory-Game/
+Link to play the game : https://github.com/Nayan1729/WebDev-2-Simon-Memory-Game
 
 Start: Click anywhere on the device to start the game.
 
